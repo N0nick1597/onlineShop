@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="includes/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('css/img/howtoback.jpg');
+        }
+    </style>
+    <title>Šrotas</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+                    aria-haspopup="true" key="languages" aria-expanded="false">
+                    Languages
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu" id="dropmenu">
+                    <a class="dropdown-item" key="en" id="en"><span class="flag-icon flag-icon-gb"> </span> English</a>
+                    <a class="dropdown-item" key="lt" id="lt"><span class="flag-icon flag-icon-lt"> </span>
+                        Lithuanian</a>
+                </div>
+            </div>
+            <a class="navbar-brand" href="index.html"> <img src="css/img/logo.png"> </a>
+            <ul class="navbar-nav nav-left">
+                <li class="nav-item"><a class="nav-link" key="spare parts" href="spare parts.html"> SPARE PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="aftermarket" href="aftermarket.html"> AFTERMARKET PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="howto" href="how to.html"> HOW TO</a></li>
+                <li class="nav-item"><a class="nav-link" key="about" href="about.html"> ABOUT</a></li>
+            </ul>
+            <div class="container jumbotron text-center">
+                <ul class="nav navbar-nav ml-auto" id="logincontent">
+                    <button class="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal"
+                        key="signin" id="signin">SIGN
+                        IN</button>
+                    <button class="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal"
+                        key="signup" id="signup">SIGN
+                        UP</button>
+                </ul>
+            </div>
+            <div class="modal fade" role="dialog" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signinform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" role="dialog" id="signupModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signupform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputUsername" key="label_username">Enter your username</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        data-translate="username_placeholer" placeholder="Username" key="username" required>
+                                    <div class="invalid-feedback" key="invalid_username">
+                                        Please enter a username
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+    <div id="karusele" class="carousel slide" data-ride="carousel" data-interval="false">
+        <ol class="carousel-indicators">
+            <li data-target="#karusele" data-slide-to="0" class="active"></li>
+            <li data-target="#karusele" data-slide-to="1"></li>
+            <li data-target="#karusele" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="iframe-container">
+                    <iframe width="1000px" height="500px" src="https://www.youtube.com/embed/7hePdvn7Txw?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" id="iframe">
+                    </iframe>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="iframe-container">
+                    <iframe width="1000px" height="500px" src="https://www.youtube.com/embed/ukF1T0AgNUk?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" id="iframe">
+                    </iframe>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="iframe-container">
+                    <iframe width="1000px" height="500px" src="https://www.youtube.com/embed/OJvD1CWbyzg?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com" id="iframe">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#karusele" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#karusele" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+        <div class="container text-center text-md-left">
+
+            <div class="row">
+
+                <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1" id="infobar">
+
+                    <h5 class="font-weight-bold text-uppercase mb-4" key="short">SHORT HISTORY</h5>
+                    <p>Subaru cars are manufactured by Subaru Corporation, founded in 1953. Subaru in Japanese means
+                        "Pleiades" - the stars of the Seattle in Tauro Seattle, a symbol of rebirth and power in Japan.
+                    </p>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1" id="contacts">
+
+                    <h5 class="font-weight-bold text-uppercase mb-4" key="contact">CONTACT INFO</h5>
+
+                    <ul class="list-unstyled">
+                        <li>
+                            <p>
+                                <i class="fas fa-home mr-3"></i> Lietuva, Vilnius</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-envelope mr-3"></i> subarudalys@gmail.com</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-phone mr-3"></i> +37060041452</p>
+                        </li>
+                        <li>
+                            <p>
+                                <i class="fas fa-print mr-3"></i> +37065045254</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <hr class="clearfix w-100 d-md-none">
+
+            </div>
+
+        </div>
+
+        <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://github.com/Airidas36"> Github</a>
+        </div>
+
+    </footer>
+
+</body>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+</html>

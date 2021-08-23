@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="includes/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('css/img/xray.jpg');
+        }
+    </style>
+    <title>Šrotas</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+                    aria-haspopup="true" key="languages" aria-expanded="false">
+                    Languages
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu" id="dropmenu">
+                    <a class="dropdown-item" key="en" id="en"><span class="flag-icon flag-icon-gb"> </span> English</a>
+                    <a class="dropdown-item" key="lt" id="lt"><span class="flag-icon flag-icon-lt"> </span>
+                        Lithuanian</a>
+                </div>
+            </div>
+            <a class="navbar-brand" href="index.html"> <img src="css/img/logo.png"> </a>
+            <ul class="navbar-nav nav-left">
+                <li class="nav-item"><a class="nav-link" key="spare parts" href="spare parts.html"> SPARE PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="aftermarked" href="aftermarket.html"> AFTERMARKET PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="howto" href="how to.html"> HOW TO</a></li>
+                <li class="nav-item"><a class="nav-link" key="gallery" href="gallery.html"> OUR JOB GALLERY</a></li>
+                <li class="nav-item"><a class="nav-link" key="about" href="about.html"> ABOUT</a></li>
+            </ul>
+            <div class="container jumbotron text-center">
+                <ul class="nav navbar-nav ml-auto" id="logincontent">
+                    <button class="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal"
+                        key="signin" id="signin">SIGN
+                        IN</button>
+                    <button class="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal"
+                        key="signup" id="signup">SIGN
+                        UP</button>
+                </ul>
+            </div>
+            <div class="modal fade" role="dialog" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signinform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" role="dialog" id="signupModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signupform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputUsername" key="label_username">Enter your username</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        data-translate="username_placeholer" placeholder="Username" key="username" required>
+                                    <div class="invalid-feedback" key="invalid_username">
+                                        Please enter a username
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <main id="content" class="group" role="main">
+        <div class="row">
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(117).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(117).jpg"
+                        class="img-fluid">
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(98).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(98).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(131).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(131).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(123).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(123).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(118).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(118).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(128).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(128).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(132).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(132).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(115).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(115).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+
+            <div class="col-sm">
+                <a href="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(133).jpg">
+                    <img alt="picture" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(133).jpg"
+                        class="img-fluid" />
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+    <div class="container text-center text-md-left">
+
+        <div class="row">
+
+            <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1" id="infobar">
+
+                <h5 class="font-weight-bold text-uppercase mb-4" key="info">INFO</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident
+                    voluptate
+                    esse
+                    quasi, veritatis totam voluptas nostrum.</p>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+            <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1" id="footitems">
+
+                <h5 class="font-weight-bold text-uppercase mb-4" key="footpage">PAGES</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <a href="videos.html" key="videos">VIDEOS</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="tables.html" key="tables">TABLES</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="form.html" key="form">FORM</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="gallery.html" key="gallery">GALLERY</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <a href="list.html" key="list">LIST</a>
+                        </p>
+                    </li>
+                </ul>
+
+            </div>
+            <hr class="clearfix w-100 d-md-none">
+
+            <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1" id="contacts">
+
+                <h5 class="font-weight-bold text-uppercase mb-4" key="contact">CONTACT INFO</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <p>
+                            <i class="fas fa-home mr-3"></i> Lietuva, Vilnius, VGTU</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-envelope mr-3"></i> airidas.sarkunas@gmail.com</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-phone mr-3"></i> + 12 34 567 89</p>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="fas fa-print mr-3"></i> + 12 34 567 89</p>
+                    </li>
+                </ul>
+
+            </div>
+
+            <hr class="clearfix w-100 d-md-none">
+
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+        <a href="https://github.com/Airidas36"> Github</a>
+    </div>
+
+</footer>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+</html>

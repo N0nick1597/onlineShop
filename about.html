@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" , content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+        body {
+            background-image: url('css/img/backgroundabout.jpg');
+        }
+    </style>
+    <title>Šrotas</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-xl">
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
+            <i class="fas fa-bars" style="color:#fff; font-size:28px;"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapse_target">
+            <a class="navbar-brand" href="index.html"> <img src="css/img/logo.png"> </a>
+            <ul class="navbar-nav nav-left">
+                <li class="nav-item"><a class="nav-link" key="spare parts" href="spare parts.html"> SPARE PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="aftermarket" href="aftermarket.html"> AFTERMARKET PARTS</a></li>
+                <li class="nav-item"><a class="nav-link" key="howto" href="how to.html"> HOW TO</a></li>
+                <li class="nav-item"><a class="nav-link" key="about" href="about.html"> ABOUT</a></li>
+            </ul>
+            <div class="container jumbotron text-center">
+                <ul class="nav navbar-nav ml-auto" id="logincontent">
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginModal"
+                        id="signin">SIGN
+                        IN</button>
+                    <button class="button" class="btn btn-success" data-toggle="modal" data-target="#signupModal"
+                        id="signup">SIGN
+                        UP</button>
+                </ul>
+            </div>
+            <div class="modal fade" role="dialog" id="loginModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signinform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade" role="dialog" id="signupModal">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="signupform">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputUsername" key="label_username">Enter your username</label>
+                                    <input type="text" class="form-control" id="exampleInputPassword1"
+                                        data-translate="username_placeholer" placeholder="Username" key="username" required>
+                                    <div class="invalid-feedback" key="invalid_username">
+                                        Please enter a username
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-envelope"></i>
+                                    <label for="exampleInputEmail1" key="label_email"> Enter your email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" data-translate="email_placeholder"
+                                        placeholder="Enter email" key="email" required>
+                                    <div class="invalid-feedback" key="invalid_email">
+                                        Please enter a valid email address
+                                    </div>
+                                    <small id="emailHelp" key="email_help" class="form-text text-muted">We'll never share your
+                                        email with anyone
+                                        else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <i class="fas fa-id-card"></i>
+                                    <label for="exampleInputPassword1" key="label_password">Enter your password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1"
+                                        data-translate="password_placeholer" placeholder="Password" key="password" required>
+                                    <div class="invalid-feedback" key="invalid_password">
+                                        Please enter a password
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" key="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </nav>
+
+    <main id="content" class="group" role="main">
+        <article>
+            <section>
+                <h4>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
+                    Duis id pharetra justo. Pellentesque semper mi in velit feugiat porta. <br>
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; <br>
+                    Cras eros dolor, imperdiet sed porttitor eu, maximus ut quam.
+                    Vivamus iaculis nisl eu vulputate posuere. Nulla nec facilisis neque. <br>
+                    Quisque vel leo tellus. Vivamus ligula purus, eleifend ut neque eu, condimentum finibus ex.<br>
+                    Suspendisse finibus, turpis id faucibus gravida, lacus lectus placerat erat, sit amet semper felis
+                    tellus nec arcu.
+                    Sed aliquet, metus a eleifend aliquam, odio tellus blandit felis, quis porttitor ipsum erat
+                    imperdiet neque. <br>
+                    Nulla quis maximus eros. Duis velit erat, hendrerit in nisi nec, mattis malesuada eros. <br>
+                    Integer molestie eros eu lacinia convallis. <br>
+                    Nulla lorem elit, imperdiet non convallis sed, iaculis hendrerit purus. <br>
+                    Sed ultricies viverra diam. Vivamus a nisi luctus dui rutrum consectetur quis at elit. <br>
+                    Integer faucibus bibendum feugiat.
+                    <h4>
+            </section>
+        </article>
+    </main>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+</html>
